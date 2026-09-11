@@ -101,16 +101,15 @@ article{background:#fff;border:1px solid #ece7e1;border-radius:16px;padding:20px
 const p=document.querySelector('.panel');
 document.querySelector('.menu-btn').onclick=()=>p.classList.toggle('open');
 p.querySelectorAll('a').forEach(a=>a.onclick=()=>p.classList.remove('open'));
-</script>
-<script>
+function joinFiles(files){return Promise.all(files.map(f=>fetch(f).then(r=>r.text()))).then(parts=>parts.join('').trim())}
 Promise.all([
-  fetch('logo.txt').then(r=>r.text()),
-  fetch('hero.txt').then(r=>r.text())
+  joinFiles(['logo-0.txt','logo-1.txt','logo-2.txt','logo-3.txt']),
+  joinFiles(['hero-0.txt','hero-1.txt','hero-2.txt','hero-3.txt','hero-4.txt'])
 ]).then(([logo,hero])=>{
   const l=document.getElementById('logoImg');
   const h=document.getElementById('heroImg');
-  if(l) l.src=logo.trim();
-  if(h) h.src=hero.trim();
+  if(l) l.src=logo;
+  if(h) h.src=hero;
 });
 </script>
 </body></html>

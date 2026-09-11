@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0b0a" />
+  <title>Welcome Home Inspections | NH &amp; MA</title>
+  <meta name="description" content="Photo-rich home, condo, and commercial inspections across New Hampshire and Massachusetts. Call or text Chris at 603-396-5889." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Instrument+Serif:ital@1&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#161311;--muted:#6b6560;--paper:#f7f3ee;--cream:#fbf8f4;--red:#c81f26;--black:#0c0b0a}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    html,body{overflow-x:hidden}
+    body{font-family:Outfit,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:16px}
+    .wrap{width:min(1100px,calc(100% - 32px));margin-inline:auto}
+    .nav{position:sticky;top:0;z-index:20;background:var(--black);color:#f3eee8}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+    .brand{font-family:Fraunces,Georgia,serif;color:#fff;text-decoration:none;font-size:17px}
+    .brand small{display:block;font-family:Outfit,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#b9b0a6}
+    .nav-links{display:none;gap:16px;font-size:14px}
+    .nav-links a{color:#d8d0c7;text-decoration:none}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;text-decoration:none;font-size:14px;min-height:44px}
+    .btn-red{background:var(--red);color:#fff}
+    .btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff}
+    .menu-btn{background:none;border:0;color:#fff;font-size:22px;width:44px;height:44px}
+    .mobile-panel{display:none;background:#0c0b0a;padding:8px 16px 18px}
+    .mobile-panel.open{display:block}
+    .mobile-panel a{display:block;color:#eee;padding:12px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero{position:relative;min-height:92svh;color:#fff;display:grid;align-items:end}
+    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.78))}
+    .hero-copy{position:relative;z-index:1;padding:48px 0 40px}
+    .pill{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+    h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.03em;line-height:1.12}
+    h1{font-size:clamp(2.1rem,10vw,4.2rem);max-width:14ch}
+    h2{font-size:clamp(1.7rem,6vw,3rem);margin:8px 0 16px}
+    em{font-family:"Instrument Serif",Georgia,serif;font-style:italic;color:#ef7a76}
+    .eyebrow{color:var(--red);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+    section{padding:64px 0}
+    .paper{background:var(--paper)}
+    .dark{background:var(--black);color:#f4efe9}
+    .dark .eyebrow{color:#ef7a76}
+    .grid{display:grid;gap:14px;margin-top:24px}
+    article,blockquote,details{background:#fffcf8;border:1px solid rgba(22,19,17,.1);border-radius:18px;padding:20px}
+    .dark article{background:#171513;border-color:rgba(255,255,255,.06);color:#c9c0b6}
+    .dark article b{color:#e24b48;font-family:Fraunces,Georgia,serif;font-size:1.6rem}
+    blockquote p{margin-bottom:10px}
+    cite{color:var(--muted);font-style:normal;font-size:13px}
+    details{margin-bottom:10px}
+    summary{cursor:pointer;font-weight:500}
+    details p{margin-top:10px;color:var(--muted)}
+    .actions{display:grid;gap:10px;margin-top:22px}
+    .footer{background:var(--black);color:#8d847b;padding:28px 0}
+    @media(min-width:900px){
+      body{font-size:17px}
+      .nav-links{display:flex}
+      .menu-btn,.mobile-panel{display:none !important}
+      .grid.three{grid-template-columns:repeat(3,1fr)}
+      .grid.four{grid-template-columns:repeat(4,1fr)}
+      .actions{grid-template-columns:auto auto;justify-content:start}
+      section{padding:88px 0}
+      .nav-inner{min-height:80px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Welcome Home<small>Inspections</small></a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#areas">Areas</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-red" href="#contact">Book Now</a>
+      <button class="menu-btn" type="button" aria-label="Menu">☰</button>
+    </div>
+    <div class="mobile-panel">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:16033965889">Call 603-396-5889</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80" alt="New England home" />
+      <div class="wrap hero-copy">
+        <p class="pill">Now booking across NH &amp; MA</p>
+        <h1>Peace of mind starts at <em>your front door.</em></h1>
+        <p>Meticulous, photo-rich inspections for homes, condos, and commercial buildings — from a construction veteran who knows how houses are built, and where they fail.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="#contact">Book your inspection</a>
+          <a class="btn btn-ghost" href="tel:16033965889">Call or text Chris</a>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrap">
+        <p class="eyebrow">What we inspect</p>
+        <h2>Inspections built around <em>your peace of mind.</em></h2>
+        <div class="grid three">
+          <article><h3>Home inspections</h3><p>Top-to-bottom visual inspection with a clear photo-rich report.</p></article>
+          <article><h3>Condo &amp; townhouse</h3><p>Unit-specific work that accounts for shared systems and HOA lines.</p></article>
+          <article><h3>Commercial</h3><p>Due-diligence reports for retail, office, and small commercial buildings.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="why" class="paper">
+      <div class="wrap">
+        <p class="eyebrow">Why Welcome Home</p>
+        <h2>Trusted across New England because the work is careful.</h2>
+        <div class="grid three">
+          <article><h3>Licensed MA + NH</h3><p>Professional liability and E&amp;O — not just a site accident policy.</p></article>
+          <article><h3>Construction first</h3><p>Twenty years building homes before inspecting them.</p></article>
+          <article><h3>Chris picks up</h3><p>Call or text the inspector directly. No call center.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="process" class="dark">
+      <div class="wrap">
+        <p class="eyebrow">Our process</p>
+        <h2>From booking to closing, in <em>four quiet steps.</em></h2>
+        <div class="grid four">
+          <article><b>01</b><h3>Schedule</h3><p>Evenings and weekends around your contingency.</p></article>
+          <article><b>02</b><h3>Inspect</h3><p>2–3 hours, foundation to roof.</p></article>
+          <article><b>03</b><h3>Report</h3><p>Photo-rich writeup, typically within 24 hours.</p></article>
+          <article><b>04</b><h3>Discuss</h3><p>Walk findings with you and your agent.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="reviews" class="paper">
+      <div class="wrap">
+        <p class="eyebrow">What clients say</p>
+        <h2>Stories from the last walkthrough.</h2>
+        <div class="grid three">
+          <blockquote><p>“The report had photos of everything — we knew exactly what we were buying.”</p><cite>Sarah &amp; Mark P., Manchester, NH</cite></blockquote>
+          <blockquote><p>“Zero pressure. He saved us from a major foundation problem.”</p><cite>Jennifer L., Worcester, MA</cite></blockquote>
+          <blockquote><p>“The only inspector I refer my clients to.”</p><cite>David R., Concord, NH · Realtor</cite></blockquote>
+        </div>
+      </div>
+    </section>
+    <section id="areas">
+      <div class="wrap">
+        <p class="eyebrow">Where we serve</p>
+        <h2>All of <em>New Hampshire &amp; Massachusetts.</em></h2>
+        <p>From the seacoast to the Berkshires. If you are buying in New England, we will be there.</p>
+      </div>
+    </section>
+    <section id="faq" class="paper">
+      <div class="wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2>Answers that actually matter.</h2>
+        <details open><summary>How long does an inspection take?</summary><p>Usually 2–3 hours on site. Attend if you can.</p></details>
+        <details><summary>When is the report ready?</summary><p>Typically within 24 hours.</p></details>
+        <details><summary>Are you licensed and insured?</summary><p>Yes — MA and NH, with professional liability and E&amp;O.</p></details>
+        <details><summary>Can I attend?</summary><p>Please do. Chris walks findings as he sees them.</p></details>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let’s get your inspection on the calendar.</h2>
+        <p><a href="tel:16033965889">603-396-5889</a> · Chris<br />
+        <a href="tel:16035870011">603-587-0011</a> · Office<br />
+        <a href="mailto:Chris@WelcomeHomeInspections.Me">Chris@WelcomeHomeInspections.Me</a></p>
+        <div class="actions">
+          <a class="btn btn-red" href="tel:16033965889">Call or text Chris</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">© 2026 Welcome Home Inspections · Licensed &amp; Insured · MA + NH · Owner: Chris Leger</div></footer>
+  <script>
+    const panel = document.querySelector('.mobile-panel');
+    document.querySelector('.menu-btn').addEventListener('click', () => panel.classList.toggle('open'));
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+  </script>
+</body>
+</html>

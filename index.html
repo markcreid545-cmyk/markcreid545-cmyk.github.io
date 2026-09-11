@@ -42,5 +42,75 @@ article{background:#fff;border:1px solid #ece7e1;border-radius:16px;padding:20px
 @media(max-width:899px){.actions .btn{width:100%}}
 </style></head>
 <body>
-<!-- SOURCE: artifacts/welcome-home-inspections DEMO.html -->
+<header class="nav"><div class="wrap nav-inner">
+<a class="brand" href="#top"><img id="logoImg" src="" alt="Welcome Home Inspections"/></a>
+<nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<div style="display:flex;gap:10px;align-items:center"><a class="btn btn-red" href="#contact">Book Now</a><button class="menu-btn" type="button">Menu</button></div>
+</div>
+<div class="panel"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="tel:16033965889">Call 603-396-5889</a></div>
+</header>
+<section class="hero" id="top">
+<img id="heroImg" class="bg" src="" alt=""/>
+<div class="wrap hero-copy">
+<div class="pill">Now booking across NH & MA</div>
+<h1>Peace of Mind Starts at <em>Your Front Door.</em></h1>
+<p class="lede">Welcome Home Inspections delivers meticulous, photo-rich home, condo, and commercial inspections across New Hampshire & Massachusetts — backed by 20+ years of construction expertise and 5,000+ satisfied clients.</p>
+<div class="actions">
+<a class="btn btn-red" href="#contact">Book Your Inspection</a>
+<a class="btn btn-glass" href="#contact">Get an Instant Quote</a>
+<a class="btn btn-glass" href="tel:16033965889">603-396-5889</a>
+</div>
+<div class="stats">
+<div class="stat">Licensed MA & NH</div>
+<div class="stat">5,000+ Happy Clients</div>
+<div class="stat">Fully Insured</div>
+<div class="stat">20+ Years Experience</div>
+</div>
+</div>
+</section>
+<section id="services"><div class="wrap"><h2>What we inspect</h2><div class="grid">
+<article><h3>Home inspections</h3><p>Top-to-bottom visual inspection with a photo-rich report.</p></article>
+<article><h3>Condo & townhouse</h3><p>Unit-specific work for shared systems and HOA lines.</p></article>
+<article><h3>Commercial</h3><p>Due-diligence reports for retail, office, and small commercial buildings.</p></article>
+</div></div></section>
+<section id="why" class="cream"><div class="wrap"><h2>Why Welcome Home</h2><div class="grid">
+<article><h3>Licensed MA + NH</h3><p>Professional liability and E&O.</p></article>
+<article><h3>Construction first</h3><p>Twenty years building homes before inspecting them.</p></article>
+<article><h3>Chris picks up</h3><p>Call or text the inspector directly.</p></article>
+</div></div></section>
+<section id="process" class="dark"><div class="wrap"><h2>Four quiet steps</h2><div class="grid">
+<article><h3>01 Schedule</h3><p>Evenings and weekends around your contingency.</p></article>
+<article><h3>02 Inspect</h3><p>2–3 hours, foundation to roof.</p></article>
+<article><h3>03 Report</h3><p>Typically within 24 hours.</p></article>
+</div></div></section>
+<section id="reviews" class="cream"><div class="wrap"><h2>Reviews</h2><div class="grid">
+<article><p>“The report had photos of everything.”</p><p>Sarah & Mark P., Manchester, NH</p></article>
+<article><p>“He saved us from a major foundation problem.”</p><p>Jennifer L., Worcester, MA</p></article>
+<article><p>“The only inspector I refer my clients to.”</p><p>David R., Concord, NH</p></article>
+</div></div></section>
+<section id="areas"><div class="wrap"><h2>New Hampshire & Massachusetts</h2></div></section>
+<section id="faq" class="cream"><div class="wrap"><h2>FAQ</h2><p>Most inspections take 2–3 hours. Reports typically arrive within 24 hours. Licensed in MA and NH with E&O.</p></div></section>
+<section id="contact"><div class="wrap"><h2>Get in touch</h2>
+<p><a href="tel:16033965889">603-396-5889</a> · Chris<br/>
+<a href="tel:16035870011">603-587-0011</a> · Office<br/>
+<a href="mailto:Chris@WelcomeHomeInspections.Me">Chris@WelcomeHomeInspections.Me</a></p>
+<p style="margin-top:16px"><a class="btn btn-red" href="tel:16033965889">Call or text Chris</a></p>
+</div></section>
+<footer class="footer"><div class="wrap">© 2026 Welcome Home Inspections · Owner: Chris Leger</div></footer>
+<script>
+const p=document.querySelector('.panel');
+document.querySelector('.menu-btn').onclick=()=>p.classList.toggle('open');
+p.querySelectorAll('a').forEach(a=>a.onclick=()=>p.classList.remove('open'));
+</script>
+<script>
+Promise.all([
+  fetch('logo.txt').then(r=>r.text()),
+  fetch('hero.txt').then(r=>r.text())
+]).then(([logo,hero])=>{
+  const l=document.getElementById('logoImg');
+  const h=document.getElementById('heroImg');
+  if(l) l.src=logo.trim();
+  if(h) h.src=hero.trim();
+});
+</script>
 </body></html>
